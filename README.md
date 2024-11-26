@@ -84,21 +84,29 @@ Adds a new family member. Example request body:
   "parentId": 1
 }
 
-### PUT /api/members
-Updates an existing family member.
+### PUT /api/members/:id
+Updates an existing family member. Example request body:
 
+```json
 {
   "name": "Jane Doe",
   "age": 30
 }
 
+
+
 ### DELETE /api/members/:id
 Deletes a family member by ID.
+
+---
 
 ## Known Issues
 - Parent-child relationships must be correctly maintained in the database for the tree view to render properly.
 - Ensure unique IDs for all members to prevent conflicts.
-- Future Enhancements
+
+---
+
+## Future Enhancements
 - Add search functionality to find specific members quickly.
 - Provide drag-and-drop functionality for rearranging members in the tree.
 
