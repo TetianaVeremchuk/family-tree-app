@@ -9,8 +9,7 @@
     "start": "webpack serve",
     "build": "webpack",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "db:sync": "ts-node server/src/db/sync.ts"
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
