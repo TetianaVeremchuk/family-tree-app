@@ -29,8 +29,13 @@ This application allows users to manage a family tree by adding, updating, and d
 3. Sync the database schema:
    `npm run db:sync`
 
-4. Start the backend server:
+4. Build the backend:
+   `npm run build`
+
+5. Start the backend server:
    `npm start`
+
+The server will run on http://localhost:5000.
 
 ### Frontend
 1. Navigate to the frontend directory:
