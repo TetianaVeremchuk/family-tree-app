@@ -83,6 +83,7 @@ Adds a new family member. Example request body:
   "age": 35,
   "parentId": 1
 }
+```
 
 ### PUT /api/members/:id
 Updates an existing family member. Example request body:
@@ -92,8 +93,7 @@ Updates an existing family member. Example request body:
   "name": "Jane Doe",
   "age": 30
 }
-
-
+```
 
 ### DELETE /api/members/:id
 Deletes a family member by ID.
