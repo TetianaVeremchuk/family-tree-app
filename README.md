@@ -1,6 +1,6 @@
 # Family Tree Management Application
 
-[**DEMO**](https://github.com/TetianaVeremchuk/family-tree-app)
+[**DEMO**](https://tetianaveremchuk.github.io/family-tree-app/)
 
 ## Overview
 This application allows users to manage a family tree by adding, updating, and deleting members. The tree is displayed as a nested accordion menu, showing parent-child relationships visually. The backend is built using Node.js, Sequelize, and MySQL, while the frontend is powered by React, Redux, Redux-Saga, and Webpack.
@@ -13,48 +13,45 @@ This application allows users to manage a family tree by adding, updating, and d
 - State Management: Redux handles the application's state, and Redux-Saga is used for side effects like API calls.
 
 ## Installation
+
 ### Backend
-```bash
-# Install dependencies
-npm install
+1. Install dependencies:
+   `npm install`
 
-# Set up the database (MySQL)
-# Configure your database credentials in .env:
-DB_NAME=family_tree
-DB_USER=root
-DB_PASSWORD=8765321
-DB_HOST=localhost
-DB_PORT=3306
+2. Set up the database (MySQL):
+   Configure your database credentials in `.env`:
+   - `DB_NAME=family_tree`
+   - `DB_USER=root`
+   - `DB_PASSWORD=8765321`
+   - `DB_HOST=localhost`
+   - `DB_PORT=3306`
 
-# Sync the database schema
-npm run db:sync
+3. Sync the database schema:
+   `npm run db:sync`
 
-# Start the backend server
-npm start
+4. Start the backend server:
+   `npm start`
 
 ### Frontend
-# Navigate to the frontend directory
-```bash
- cd frontend
+1. Navigate to the frontend directory:
+   `cd frontend`
 
-# Install dependencies
-npm install
+2. Install dependencies:
+   `npm install`
 
-# Start the frontend development server
-npm start
+3. Start the frontend development server:
+   `npm start`
 
 ### Webpack
-# Webpack is used to bundle the frontend files for production.
-# Build the production files:
-npm run build
-
-# The bundled files will be output to the dist directory.
+- Webpack is used to bundle the frontend files for production.
+- Build the production files: `npm run build`
+- The bundled files will be output to the `dist` directory.
 
 ## Usage
-1.Open your browser and navigate to http://localhost:3000
-2.Use the "Add Member" button to create a new family member.
-3.Click "Update" to edit a member's details or "Delete" to remove them.
-4.Parent-child relationships are managed through the Parent ID field during member creation.
+1. Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
+2. Use the "Add Member" button to create a new family member.
+3. Click "Update" to edit a member's details or "Delete" to remove them.
+4. Parent-child relationships are managed through the Parent ID field during member creation.
 
 ## Technologies
 
@@ -74,19 +71,20 @@ npm run build
 
 ## API Endpoints
 
-## GET /api/members
+### GET /api/members
 Retrieves the entire family tree in a nested format.
 
-## POST /api/members
-Adds a new family member.
+### POST /api/members
+Adds a new family member. Example request body:
 
+```json
 {
   "name": "John",
   "age": 35,
   "parentId": 1
 }
 
-## PUT /api/members/:id
+### PUT /api/members
 Updates an existing family member.
 
 {
@@ -94,7 +92,7 @@ Updates an existing family member.
   "age": 30
 }
 
-## DELETE /api/members/:id
+### DELETE /api/members/:id
 Deletes a family member by ID.
 
 ## Known Issues
