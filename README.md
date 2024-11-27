@@ -3,15 +3,16 @@
 [**DEMO**](https://tetianaveremchuk.github.io/family-tree-app/)
 
 ## Overview
-This application allows users to manage a family tree by adding, updating, and deleting members. The tree is displayed as a nested accordion menu, showing parent-child relationships visually. The backend is built using Node.js, Sequelize, and MySQL, while the frontend is powered by React, Redux, Redux-Saga, and Webpack.
+This application allows users to manage a family tree by adding, updating, and deleting members. The tree is displayed as a nested accordion menu, showing parent-child relationships visually. The backend is built using Node.js, Sequelize, and MySQL, while the frontend is powered by React, Redux, and TypeScript.
 
 ## Features
-- Add Member: Add a new family member. If a parent ID is specified, the member is added as a child.
-- Update Member: Edit the details of an existing family member.
+- Add Member: Add a new family member. During member creation, you can specify the parent's name to add the new member as a child. If no parent is specified, the member is added to the root level.
+- Autocomplete Parent Name: The input field for specifying a parent supports autocomplete, suggesting parent names dynamically.
+- Auto-expansion: When a new member is added, the tree automatically expands to show the added member.
+- Update Member: Edit the details (name or age) of an existing family member.
 - Delete Member: Remove a family member from the tree.
-- Nested Tree View: The family tree is rendered as a hierarchical structure with nested levels.
-- State Management: Redux handles the application's state, and Redux-Saga is used for side effects like API calls.
-
+- Nested Tree View: The family tree is rendered as a hierarchical structure with nested levels that can be expanded or collapsed.
+- State Management: Redux is used to handle the application's state.
 ## Installation
 
 ### Backend
@@ -26,13 +27,10 @@ This application allows users to manage a family tree by adding, updating, and d
    - `DB_HOST=localhost`
    - `DB_PORT=3306`
 
-3. Sync the database schema:
-   `npm run db:sync`
-
-4. Build the backend:
+3. Build the backend:
    `npm run build`
 
-5. Start the backend server:
+4. Start the backend server:
    `npm start`
 
 The server will run on http://localhost:5000.
@@ -106,8 +104,8 @@ Deletes a family member by ID.
 ---
 
 ## Known Issues
-- Parent-child relationships must be correctly maintained in the database for the tree view to render properly.
 - Ensure unique IDs for all members to prevent conflicts.
+- Parent-child relationships must be correctly maintained in the database for the tree view to render properly.
 
 ---
 

@@ -1,12 +1,13 @@
 {
-  "name": "family-tree",
+  "name": "family-tree-backend",
   "version": "1.0.0",
-  "description": "Application to manage family tree",
-  "main": "dist/index.js",
+  "description": "Backend for Family Tree Application",
+  "main": "server/dist/index.js",
   "scripts": {
-    "start": "node dist/index.js",
-    "build": "tsc",
-    "dev": "ts-node-dev ./src/index.ts"
+    "start": "node server/dist/index.js",
+    "build": "tsc -p server/tsconfig.json",
+    "dev": "ts-node-dev server/src/index.ts",
+    "db:reset": "ts-node server/src/db/reset.ts"
   },
   "dependencies": {
     "body-parser": "^1.20.3",
